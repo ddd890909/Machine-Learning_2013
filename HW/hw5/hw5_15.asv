@@ -1,0 +1,98 @@
+%hw5_15
+
+clear all;
+clc;
+
+Ftrain = load ('hw5_14_train.dat');
+[nFtrain,mFtrain]=size(Ftrain);
+
+Xtrain=Ftrain(1:nFtrain,1:mFtrain-1);
+[nXtrain,mXtrain]=size(Xtrain);
+Ytrain=Ftrain(1:nFtrain,mFtrain);
+
+%cross
+%AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 32 -c 0.001 -v 5');
+Xtrain1=Xtrain(1:100,:);
+Ytrain1=Ytrain(1:100,:);
+Xtrain0=Xtrain(101:500,:);
+Ytrain0=Ytrain(101:500,:);
+model=svmtrain(Ytrain0,Xtrain0,'-s 3 -g 32 -c 0.001');
+Lab=svmpredict(Ytrain1,Xtrain1,model);
+nErrSum=nErrSum+length( find( Lab-Ytrain0 ) );
+
+Xtrain2=Xtrain(101:200,:);
+Ytrain2=Ytrain(101:200,:);
+Xtrain0=[Xtrain(1:100,:) Xtrain(201:500,:)];
+Ytrain0=[Ytrain(1:100,:) Ytrain(201:500,:)];
+model=svmtrain(Ytrain0,Xtrain0,'-s 3 -g 32 -c 0.001');
+Lab=svmpredict(Ytrain2,Xtrain2,model);
+nErrSum=length( find( Lab-Ytrain0 ) );
+
+Xtrain1=Xtrain(1:100,:);
+Ytrain1=Ytrain(1:100,:);
+Xtrain0=Xtrain(101:500,:);
+Ytrain0=Ytrain(101:500,:);
+model=svmtrain(Ytrain0,Xtrain0,'-s 3 -g 32 -c 0.001');
+Lab=svmpredict(Ytrain1,Xtrain1,model);
+nErrSum=length( find( Lab-Ytrain0 ) );
+
+Xtrain1=Xtrain(1:100,:);
+Ytrain1=Ytrain(1:100,:);
+Xtrain0=Xtrain(101:500,:);
+Ytrain0=Ytrain(101:500,:);
+model=svmtrain(Ytrain0,Xtrain0,'-s 3 -g 32 -c 0.001');
+Lab=svmpredict(Ytrain1,Xtrain1,model);
+nErrSum=length( find( Lab-Ytrain0 ) );
+
+Xtrain1=Xtrain(1:100,:);
+Ytrain1=Ytrain(1:100,:);
+Xtrain0=Xtrain(101:500,:);
+Ytrain0=Ytrain(101:500,:);
+model=svmtrain(Ytrain0,Xtrain0,'-s 3 -g 32 -c 0.001');
+Lab=svmpredict(Ytrain1,Xtrain1,model);
+nErrSum=length( find( Lab-Ytrain0 ) );
+
+%predict
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 32 -c 0.001');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+nErrSum=length( find( Lab-Ytrain ) );
+Ein=nErrSum/nXtrain;
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 2 -c 0.001 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 2 -c 0.001');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 0.125 -c 0.001 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 0.125 -c 0.001');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 32 -c 1 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 32 -c 1');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 2 -c 1 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 2 -c 1');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 0.125 -c 1 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 0.125 -c 1');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 32 -c 1000 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 32 -c 1000');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 2 -c 1000 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 2 -c 1000');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+AccCrossVal=svmtrain(Ytrain, Xtrain, '-s 3 -g 0.125 -c 1000 -v 5');
+model = svmtrain(Ytrain, Xtrain, '-s 3 -g 0.125 -c 1000');
+[Lab,Acc,Dec]=svmpredict(Ytrain,Xtrain,model);
+
+
+
+
+
