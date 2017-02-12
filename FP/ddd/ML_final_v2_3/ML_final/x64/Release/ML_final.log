@@ -1,0 +1,42 @@
+﻿Build started 2013/12/30 下午 05:35:26.
+     1>Project "D:\Bon\Visual Studio 2012\Projects\ML_final_v2_2\ML_final\ML_final.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Release\ML_final.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt feature.cpp
+         feature.cpp
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(549): warning C4267: 'initializing' : conversion from 'size_t' to 'unsigned int', possible loss of data
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(552): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(577): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(578): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(579): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(580): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(581): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(582): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(583): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(584): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(600): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(601): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(602): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(603): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(604): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(605): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(606): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\bon\visual studio 2012\projects\ml_final_v2_2\ml_final\voronoi.h(607): warning C4800: 'uchar' : forcing value to bool 'true' or 'false' (performance warning)
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Bon\Visual Studio 2012\Projects\ML_final_v2_2\x64\Release\ML_final.exe" /INCREMENTAL:NO /NOLOGO opencv_core246.lib opencv_highgui246.lib opencv_imgproc246d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Bon\Visual Studio 2012\Projects\ML_final_v2_2\x64\Release\ML_final.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Bon\Visual Studio 2012\Projects\ML_final_v2_2\x64\Release\ML_final.lib" /MACHINE:X64 x64\Release\feature.obj
+         x64\Release\lbp.obj
+         x64\Release\Source.obj
+         x64\Release\tool.obj
+         x64\Release\yokoi.obj
+         Generating code
+         Finished generating code
+         ML_final.vcxproj -> D:\Bon\Visual Studio 2012\Projects\ML_final_v2_2\x64\Release\ML_final.exe
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\ML_final.unsuccessfulbuild".
+         Touching "x64\Release\ML_final.lastbuildstate".
+     1>Done Building Project "D:\Bon\Visual Studio 2012\Projects\ML_final_v2_2\ML_final\ML_final.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.53
