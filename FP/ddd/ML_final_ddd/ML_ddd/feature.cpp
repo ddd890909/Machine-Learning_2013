@@ -1,0 +1,16 @@
+
+#include "tool.h"
+
+using namespace std;
+using namespace cv;
+
+void feature_extract(char *name)
+{	
+	//fileToImg(name);
+	
+	string folderName;
+	folderName="D:\\course\\Machine Learning\\FP\\ddd\\ML_final_ddd\\ML_ddd\\data\\test1ImgN_G";	
+	
+	imgToFile(folderName);
+	
+}	
